@@ -8,32 +8,37 @@
   <body style="background-color:bisque">
       
     <h1>GENERADOR DE CONTRASEÑAS SEGURAS PARA E-MAIL </h1>
-    <H2> ¡BIENVENIDO! </H2>
-    <P>¿QUÉ DESEAS HACER?</P>
-    <button id= 'btn1' type='button' onClick='encode()'> CODIFICAR </button>
-    <button id= 'btn2' type='button' onClick='decode()'> DECODIFICAR </button>
+    <h2> ¡BIENVENIDO! </h2>
+   
     <p> Ingresa un código para tu contraseña</p>
-    <input id='boxOffset' type='number'/>
+    <br/>
+    <input id="boxOffset" type="number"/>
+    <br/>
     <p>Ingresa tu contraseña para asegurar</p>
-    <input id='boxString' type='text'/>
-    <button id= 'btn3' type="button" onClick='code ()'> Generar Contraseña </button>
-    <P>Contraseña Generada </P>
-    <input id='textBox3' type="text"/>
-
-    <br> <br> <br> <br>
-    <button id= 'btn4' type='button' onClick='enter ()'> Reiniciar </button> </br> </br> </br> </br>
+    <br/>
+    <input id="boxString" type="text"/>
+    <br/> <br/>
+    <button id= "btn1" type="button" onclick="encode()"> CODIFICAR </button>
+    <br/>
+    <br/>
+    <button id= "btn2" type="button" onclick="decode()"> DECODIFICAR </button>
+ 
+    <p>Contraseña Generada </p>
+    <input id="boxCoded" type="text"/>
+    <br/> <br/> <br/> <br/>
+    
+    <button id= "btn4" type="button" onclick="enter ()"> Reiniciar </button> 
   
     
     
     
-    <
     
     
-    <div id='root'>
+    <div id="root">
       <!-- <h1>Hola mundo!</h1>   -->
       <!-- Esto es un comentario -->
     </div>
-    <script src='cipher.js'></script>
-    <script src='index.js'></script>
+    <script src="cipher.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
