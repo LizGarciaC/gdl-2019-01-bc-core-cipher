@@ -1,50 +1,63 @@
 window.cipher = {
-  //cipher.encode(offset,message);
-  encode:(offset, message)=> {
-    let cMessage=[];
+  //cipher.encode(offset,string);
+  encode:(offset, string)=> {
+    let cstring=[];
 
-    for (let count=0; count<message.length; count++){ //Ciclo para acceder a cada letra individual del mensaje
+    for (let count=0; count<string.length; count++){ //Ciclo para acceder a cada letra individual del mensaje
   
-      let charAscii=(message.charCodeAt(count)-65+offset)%26+65; // Toma el valor de cada letra, lo convierte a Ascii, y lo codifica segun la ctd de desplazamientos solicitados (offset)
+      let charAscii=string.charCodeAt(count)
 
-      
-      if (charAscii<65){ // Control de flujo que se ejecuta en caso de que el desplazamiento solicitado sea negativo
-       
-        if (charAscii=-32){
-          charAscii=6;
-        }
-        
-      charAscii=charAscii+26; // Coloca el valor del caracter en ascii, dentro de la tabla de letras
+      if (charAscii==32){
+        cstring.push(String.fromCharCode(charAscii));
       }
-        
-      cMessage.push(String.fromCharCode(charAscii)); 
-    }
+        else {
 
-    return cMessage.join("");
+        charAscii=(charAscii-65+offset)%26+65;
+
+          if (charAscii<65){
+          charAscii=charAscii+26;
+        }
+        cstring.push(String.fromCharCode(charAscii)); 
+
+        }
+
+
+      }
+       
+      
+
+    return cstring.join("");
   },
 
 
-  decode:(offset, message)=>{
+  decode:(offset, string)=>{
     offset=offset*(-1);
-    let dMessage=[];
+    let dstring=[];
 
-    for (let count=0; count<message.length; count++){ //Ciclo para acceder a cada letra individual del mensaje
-      let charAscii=(message.charCodeAt(count)-65+offset)%26+65; // Toma el valor de cada letra, lo convierte a Ascii, y lo codifica segun la ctd de desplazamientos solicitados (offset)
-     
-      if (charAscii<65){ // Control de flujo que se ejecuta en caso de que el desplazamiento solicitado sea negativo
-        
-        if (charAscii=-32){
-          charAscii=6;
-        }
+    for (let count=0; count<string.length; count++){ //Ciclo para acceder a cada letra individual del mensaje
   
-      charAscii=charAscii+26; // Coloca el valor del caracter en ascii, dentro de la tabla de letras
+      let charAscii=string.charCodeAt(count)
+
+      if (charAscii==32){
+       
+        dstring.push(String.fromCharCode(charAscii));
       }
-        
-      dMessage.push(String.fromCharCode(charAscii)); //
-    }
+        else {
 
-    return dMessage.join("");
+        charAscii=(charAscii-65+offset)%26+65;
 
-  }
-  // ... 
-};
+          if (charAscii<65){
+          charAscii=charAscii+26;
+        }
+        dstring.push(String.fromCharCode(charAscii)); 
+
+        }
+
+
+      }
+
+      return dstring.join("");
+
+
+},
+}
