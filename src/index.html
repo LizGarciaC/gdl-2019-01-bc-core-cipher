@@ -5,8 +5,8 @@
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body style="background-color:bisque">
-      
+  <body>
+    <div id="root">
     <h1>GENERADOR DE CONTRASEÑAS SEGURAS PARA E-MAIL </h1>
     <h2> ¡BIENVENIDO! </h2>
    
@@ -14,9 +14,9 @@
     <br/>
     <input id="boxOffset" type="number"/>
     <br/>
-    <p>Ingresa tu contraseña para asegurar</p>
+    <p>Ingresa tu contraseña para asegurar (solo caracteres)</p>
     <br/>
-    <input id="boxString" type="text"/>
+    <input id="boxString" type="text" required pattern=[A-Za-z]* />
     <br/> <br/>
    
 
@@ -42,11 +42,12 @@
     
     
     
-    <div id="root">
+   
       <!-- <h1>Hola mundo!</h1>   -->
       <!-- Esto es un comentario -->
     </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
+  
   </body>
 </html>

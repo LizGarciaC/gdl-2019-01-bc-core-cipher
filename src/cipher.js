@@ -5,7 +5,7 @@ window.cipher = {
 
     for (let count=0; count<string.length; count++){ //Ciclo para acceder a cada letra individual del mensaje
   
-      let charAscii=string.charCodeAt(count)
+      let charAscii=string.charCodeAt(count);
 
       if (charAscii==32){
         cstring.push(String.fromCharCode(charAscii));
@@ -36,7 +36,7 @@ window.cipher = {
 
     for (let count=0; count<string.length; count++){ //Ciclo para acceder a cada letra individual del mensaje
   
-      let charAscii=string.charCodeAt(count)
+      let charAscii=string.charCodeAt(count);
 
       if (charAscii==32){
        
@@ -60,4 +60,4 @@ window.cipher = {
 
 
 },
-}
+};

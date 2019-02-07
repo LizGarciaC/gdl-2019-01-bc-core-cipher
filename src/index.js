@@ -12,7 +12,7 @@ let btn1 = document.getElementById("btn1");
 
     let stringCode; 
     stringCode=cipher.encode(Number(offset),string);
-    console.log(stringCode);
+    //console.log(stringCode);
     let boxstringCoded=document.getElementById("boxCoded"); // Crea la variable para enviar el valor a la caja de texto en html
     boxstringCoded.value=stringCode; //Asigna el valor a la caja de texto
     
