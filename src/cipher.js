@@ -11,21 +11,14 @@ window.cipher = {
         cstring.push(String.fromCharCode(charAscii));
       }
         else {
-
         charAscii=(charAscii-65+offset)%26+65;
 
           if (charAscii<65){
           charAscii=charAscii+26;
         }
         cstring.push(String.fromCharCode(charAscii)); 
-
         }
-
-
       }
-       
-      
-
     return cstring.join("");
   },
 
@@ -39,11 +32,9 @@ window.cipher = {
       let charAscii=string.charCodeAt(count);
 
       if (charAscii==32){
-       
         dstring.push(String.fromCharCode(charAscii));
       }
         else {
-
         charAscii=(charAscii-65+offset)%26+65;
 
           if (charAscii<65){
@@ -52,12 +43,8 @@ window.cipher = {
         dstring.push(String.fromCharCode(charAscii)); 
 
         }
-
-
       }
 
       return dstring.join("");
-
-
 },
 };

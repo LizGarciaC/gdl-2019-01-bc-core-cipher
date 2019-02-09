@@ -4,50 +4,40 @@ let btn1 = document.getElementById("btn1");
 
     let offset;  // variable que guarda el valor contenido en la caja de texto desplazamientos
     offset=document.getElementById("boxOffset").value;  // Asigna el valor de la caja (crea la interfaz) a la variable
-    //console.log(offset); //muestra en la consola el valor asignado
     let string; // variable que guarda el valor contenido en la caja de texto Mensaje a Codificar
     string=document.getElementById("boxString").value.toUpperCase(); // // Asigna el valor de la caja (crea la interfaz) a la variable
-    console.log(string); ////muestra en la consola el valor asignado
     
-
-    let stringCode; 
+    let stringCode;  // Variable donde se guardaran los resultados del cifrado
     stringCode=cipher.encode(Number(offset),string);
-    //console.log(stringCode);
     let boxstringCoded=document.getElementById("boxCoded"); // Crea la variable para enviar el valor a la caja de texto en html
     boxstringCoded.value=stringCode; //Asigna el valor a la caja de texto
     
 });
 
   let btn2 = document.getElementById("btn2");
-  btn2.addEventListener ('click', ()=>{
-
+  btn2.addEventListener ('click', ()=>{ //función para evento click sobre el boton
 
     let offset;  // variable que guarda el valor contenido en la caja de texto desplazamientos
     offset=document.getElementById("boxOffset").value;  // Asigna el valor de la caja (crea la interfaz) a la variable
-    console.log(offset); //muestra en la consola el valor asignado
     let string; // variable que guarda el valor contenido en la caja de texto Mensaje a decodificar
     string=document.getElementById("boxString").value.toUpperCase(); // // Asigna el valor de la caja (crea la interfaz) a la variable
-    console.log(string); ////muestra en la consola el valor asignado
 
-
-    let stringCode;
+    let stringCode; //Variable donde se guardadn los resultados del descifrado
     stringCode=cipher.decode(Number(offset),string);
-    console.log(stringCode);
     let boxstringCoded=document.getElementById("boxCoded"); // Crea la variable para enviar el valor a la caja de texto en html
     boxstringCoded.value=stringCode; //Asigna el valor a la caja de texto
 
 });
 
-//let clean = ()=>{
-  let btn3=document.getElementById('btn3');
-  btn3.addEventListener("click", ()=>{
+  let btn3=document.getElementById('btn3'); //Crea la variable y asigna el elemento btn3
+  btn3.addEventListener("click", ()=>{ // //función para evento click sobre el boton
 
-  let offset=document.getElementById("boxOffset"); 
-  offset.value="";
-  let string=document.getElementById("boxString");
-  string.value="";
-  let boxstringCoded=document.getElementById("boxCoded");
-  boxstringCoded.value="";
+  let offset=document.getElementById("boxOffset"); //Crea la variable y asigna el elemento boxOffset
+  offset.value=""; // Le asigna un valor "vacio"
+  let string=document.getElementById("boxString"); //Crea la variable y asigna el elemento boxString
+  string.value=""; // Le asigna un valor "vacio"
+  let boxstringCoded=document.getElementById("boxCoded"); //Crea la variable y asigna el elemento boxCoded
+  boxstringCoded.value=""; // Le asigna un valor "vacio"
 
 
 
